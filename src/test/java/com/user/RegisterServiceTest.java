@@ -8,6 +8,7 @@ import com.JunitBase;
 import com.common.result.Result;
 import com.common.utils.UuidUtils;
 import com.domain.dto.userinfo.UserInfoDTO;
+import com.domain.dto.userinfo.UserRegistrationDTO;
 import com.services.user.RegisterService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -33,16 +34,16 @@ public class RegisterServiceTest extends JunitBase {
 
     @Test
     public void insertUserTest() {
-        UserInfoDTO userInfoDTO = new UserInfoDTO();
-        userInfoDTO.setUserId(UuidUtils.getUserUuid());
-        userInfoDTO.setCustomerName("jjj");
-        userInfoDTO.setUserName("jjj");
-        userInfoDTO.setUserPhone("17688888888");
-        userInfoDTO.setUserAge(28);
-        userInfoDTO.setUserGender(1);
-        userInfoDTO.setUserAddress("at home test");
-        userInfoDTO.setUserDriverLicenseId("L123123");
-        Result result = registerService.registerUser(userInfoDTO);
+        UserRegistrationDTO userRegistrationDTO = new UserRegistrationDTO();
+        userRegistrationDTO.setCustomerName("jjj");
+        userRegistrationDTO.setUserName("jjj");
+        userRegistrationDTO.setUserPassword("123456");
+        userRegistrationDTO.setUserPhone("17688888888");
+        userRegistrationDTO.setUserAge(28);
+        userRegistrationDTO.setUserGender(1);
+        userRegistrationDTO.setUserAddress("at home test");
+        userRegistrationDTO.setUserDriverLicenseId("L123123");
+        Result result = registerService.registerUser(userRegistrationDTO);
         Assert.assertEquals(Result.SUCCESS, result.getRes());
     }
 

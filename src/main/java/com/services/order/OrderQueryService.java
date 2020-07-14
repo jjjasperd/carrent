@@ -5,6 +5,8 @@
 package com.services.order;
 
 import com.api.order.OrderQueryApi;
+import com.common.result.Result;
+import com.domain.dto.order.OrderDTO;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +19,26 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class OrderQueryService implements OrderQueryApi {
+    /**
+     * query orderList by userId
+     *
+     * @param userId userId
+     * @return result
+     */
+    @Override
+    public Result queryOrderByUserId(String userId) {
+        //TODO to be implemented
+        return null;
+    }
+
+    /**
+     * query order by condition
+     *
+     * @param orderDTO orderDTO
+     * @return result
+     */
+    @Override
+    public Result queryOrder(OrderDTO orderDTO) {
+        return null;
+    }
 }

@@ -8,6 +8,7 @@ import com.api.user.RegiesterApi;
 import com.common.result.Result;
 import com.common.utils.DataConvertUtils;
 import com.common.utils.ResultUtils;
+import com.common.utils.UuidUtils;
 import com.dao.user.UserMapper;
 import com.domain.dto.userinfo.UserInfoDTO;
 import com.domain.dto.userinfo.UserRegistrationDTO;
@@ -39,13 +40,8 @@ public class RegisterService implements RegiesterApi {
     @Override
     public Result registerUser(UserRegistrationDTO userRegistrationDTO) {
         UserInfoPO userInfoPO = DataConvertUtils.userRegistrationDTO2PO(userRegistrationDTO);
+        userInfoPO.setUserId(UuidUtils.getUserUuid());
         userMapper.insertUser(userInfoPO);
-        return ResultUtils.success();
-    }
-
-    @Override
-    public Result deleteUser(UserInfoDTO userInfoDTO) {
-        userMapper.deleteUSerById(userInfoDTO.getUserId());
         return ResultUtils.success();
     }
 }
