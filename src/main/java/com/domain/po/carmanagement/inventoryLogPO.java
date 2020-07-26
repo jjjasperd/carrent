@@ -4,41 +4,77 @@
  *****************************************************************************/
 package com.domain.po.carmanagement;
 
-/**
- * @author Yujia Duan
- * @version V1.0
- * @Title: inventoryLog.java
- * @Package com.domain.dto.com.carmanagement
- * @Description inventory log
- * @date 2020 07-13 1:30.
- */
-public class inventoryLogPO {
+public class InventoryLogPO {
 
-    /**
-     * log id
-     */
-    private long logId;
+  private long logId;
+  private long logType;
+  private String carId;
+  private String storeId;
+  private String remark;
+  private java.sql.Timestamp createTime;
+  private java.sql.Timestamp modifyTime;
 
-    /**
-     * log type
-     * 1:rent
-     * 2:return
-     */
-    private int logType;
 
-    /**
-     * rented car id
-     */
-    private String carId;
+  public long getLogId() {
+    return logId;
+  }
 
-    /**
-     * rented store
-     */
-    private String storeId;
+  public void setLogId(long logId) {
+    this.logId = logId;
+  }
 
-    /**
-     * remark
-     * max length 256
-     */
-    private String remark;
+
+  public long getLogType() {
+    return logType;
+  }
+
+  public void setLogType(long logType) {
+    this.logType = logType;
+  }
+
+
+  public String getCarId() {
+    return carId;
+  }
+
+  public void setCarId(String carId) {
+    this.carId = carId;
+  }
+
+
+  public String getStoreId() {
+    return storeId;
+  }
+
+  public void setStoreId(String storeId) {
+    this.storeId = storeId;
+  }
+
+
+  public String getRemark() {
+    return remark;
+  }
+
+  public void setRemark(String remark) {
+    this.remark = remark;
+  }
+
+
+  public java.sql.Timestamp getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(java.sql.Timestamp createTime) {
+    this.createTime = createTime;
+  }
+
+
+  public java.sql.Timestamp getModifyTime() {
+    return modifyTime;
+  }
+
+  public void setModifyTime(java.sql.Timestamp modifyTime) {
+    this.modifyTime = modifyTime;
+  }
+
 }
