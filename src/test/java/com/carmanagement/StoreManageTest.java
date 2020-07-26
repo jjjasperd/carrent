@@ -34,4 +34,12 @@ public class StoreManageTest extends JunitBase {
         Result result = storeManageApi.addStore(storeDTO);
         Assert.assertEquals(Result.SUCCESS,result.getRes());
     }
+
+    @Test
+    public void queryStoreAvailabeCarTest() {
+        StoreDTO storeDTO = new StoreDTO();
+        storeDTO.setStoreId("S41b98d28614f4289");
+        Result result = storeManageApi.queryStoreAvailabeCar(storeDTO);
+        Assert.assertEquals(Result.SUCCESS,result.getRes());
+    }
 }

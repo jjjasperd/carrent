@@ -1,6 +1,9 @@
 package com.dao.carmanagement;
 import com.domain.po.carmanagement.CarPO;
 import org.apache.ibatis.annotations.*;
+
+import java.util.List;
+
 /**
  * @author Yujia Duan
  * @version V1.0
@@ -51,4 +54,17 @@ public interface CarPOMapper {
 
 	@Select("select * from car where car_id = #{carId}")
 	CarPO getCarPO(String carId);
+
+	@Select({"<script>"
+			+ "select * from car " +
+			"where 1=1" +
+			"<when test= 'carId != null'> and car_id=#{carId} </when>" +
+			"<when test= 'carName != null'> and car_name=#{carName} </when>" +
+			"<when test= 'carSku != null'> and car_sku=#{carSku} </when>" +
+			"<when test= 'carStatus != null'> and car_status=#{carStatus} </when>" +
+			"<when test= 'storeId != null'> and store_id=#{storeId} </when>" +
+			"<when test= 'gasAmount != null'> and gas_amount=#{gasAmount} </when>" +
+			"<when test= 'rentDailyPrice != null'> and rent_daily_price=#{rentDailyPrice} </when>" +
+			"</script>"})
+	List<CarPO> queryCarList(CarPO carPO);
 }

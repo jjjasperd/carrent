@@ -8,7 +8,6 @@ import com.JunitBase;
 import com.api.carmanagement.CarRentalApi;
 import com.common.result.Result;
 import com.common.utils.Constant;
-import com.common.utils.UuidUtils;
 import com.domain.dto.carmanagement.CarDTO;
 import org.apache.commons.lang3.RandomUtils;
 import org.junit.Assert;
@@ -35,8 +34,8 @@ public class CarRentalServiceTest extends JunitBase {
         carDTO.setCarName("Car" + RandomUtils.nextInt(1,100));
         carDTO.setCarSku("50001" + RandomUtils.nextInt(1,100));
         carDTO.setCarStatus(Constant.CAR_STATUS_AVAILABLE);
-        carDTO.setGasAmount(100);
-        carDTO.setRentDailyPrice(100);
+        carDTO.setGasAmount((double) 100);
+        carDTO.setRentDailyPrice((double) 100);
         carDTO.setStoreId("S41b98d28614f4289");
         Result result = carRentalApi.addCar(carDTO);
         Assert.assertEquals(Result.SUCCESS,result.getRes());

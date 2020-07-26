@@ -6,6 +6,7 @@ package com.api.carmanagement;
 
 import com.common.result.Result;
 import com.domain.dto.carmanagement.StoreDTO;
+import org.springframework.stereotype.Service;
 
 /**
  * @author Yujia Duan
@@ -15,8 +16,20 @@ import com.domain.dto.carmanagement.StoreDTO;
  * @Description store manage api
  * @date 2020 07-26 13:54.
  */
+@Service
 public interface StoreManageApi {
 
+    /**
+     * add a new store
+     * @param storeDTO storeDTO
+     * @return res
+     */
     Result addStore(StoreDTO storeDTO);
 
+    /**
+     * query store available car
+     * @param storeDTO storeDTO
+     * @return res
+     */
+    Result queryStoreAvailabeCar(StoreDTO storeDTO);
 }

@@ -18,6 +18,8 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Yujia Duan
@@ -72,5 +74,23 @@ public class CarRentalService implements CarRentalApi {
         }catch (Exception e){
             return ResultUtils.fail(CommonErrorCode.SYSTEM_ERROR.getErrCode(),CommonErrorCode.SYSTEM_ERROR.getErrMsg());
         }
+    }
+
+    /**
+     * get car info list by condition
+     *
+     * @param carDTO carDTO
+     * @return res
+     */
+    @Override
+    public List<CarDTO> queryCarList(CarDTO carDTO) {
+        CarPO queryCarPO = DataConvertUtils.carDTO2PO(carDTO);
+        List<CarPO> carPOList= carPOMapper.queryCarList(queryCarPO);
+        List<CarDTO> carDTOList = new ArrayList<>();
+        for (CarPO carPO : carPOList) {
+            CarDTO resultCarDTO = DataConvertUtils.carPO2DTO(carPO);
+            carDTOList.add(resultCarDTO);
+        }
+        return carDTOList;
     }
 }

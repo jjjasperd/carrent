@@ -81,4 +81,20 @@ public class DataConvertUtils {
         carPO.setRentDailyPrice(carDTO.getRentDailyPrice());
         return carPO;
     }
+
+    public static CarDTO carPO2DTO(CarPO carPO) {
+        if (carPO == null) {
+            return null;
+        }
+        CarDTO carDTO = new CarDTO();
+        carDTO.setCarId(carPO.getCarId());
+        carDTO.setCarName(carPO.getCarName());
+        carDTO.setCarSku(carPO.getCarSku());
+        carDTO.setCarStatus(carPO.getCarStatus());
+        carDTO.setStoreId(carPO.getStoreId());
+        carDTO.setGasAmount(carPO.getGasAmount());
+        carDTO.setRentDailyPrice(carPO.getRentDailyPrice());
+        return carDTO;
+    }
+
 }

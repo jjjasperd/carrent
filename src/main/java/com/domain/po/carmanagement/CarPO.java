@@ -4,15 +4,18 @@
  *****************************************************************************/
 package com.domain.po.carmanagement;
 
-public class CarPO {
+import java.io.Serializable;
 
+public class CarPO implements Serializable {
+
+  private static final long serialVersionUID = -9051417307175314509L;
   private String carId;
   private String carName;
   private String carSku;
-  private long carStatus;
+  private Integer carStatus;
   private String storeId;
-  private double gasAmount;
-  private double rentDailyPrice;
+  private Double gasAmount;
+  private Double rentDailyPrice;
   private java.sql.Timestamp createTime;
   private java.sql.Timestamp modifyTime;
 
@@ -44,11 +47,11 @@ public class CarPO {
   }
 
 
-  public long getCarStatus() {
+  public Integer getCarStatus() {
     return carStatus;
   }
 
-  public void setCarStatus(long carStatus) {
+  public void setCarStatus(Integer carStatus) {
     this.carStatus = carStatus;
   }
 
@@ -62,23 +65,21 @@ public class CarPO {
   }
 
 
-  public double getGasAmount() {
+  public Double getGasAmount() {
     return gasAmount;
   }
 
-  public void setGasAmount(double gasAmount) {
+  public void setGasAmount(Double gasAmount) {
     this.gasAmount = gasAmount;
   }
 
-
-  public double getRentDailyPrice() {
+  public Double getRentDailyPrice() {
     return rentDailyPrice;
   }
 
-  public void setRentDailyPrice(double rentDailyPrice) {
+  public void setRentDailyPrice(Double rentDailyPrice) {
     this.rentDailyPrice = rentDailyPrice;
   }
-
 
   public java.sql.Timestamp getCreateTime() {
     return createTime;

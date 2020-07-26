@@ -41,7 +41,7 @@ public class CarDTO implements Serializable {
      * 4 : repairing
      * 5 : damaged
      */
-    private int carStatus;
+    private Integer carStatus;
 
     /**
      * store id
@@ -51,12 +51,12 @@ public class CarDTO implements Serializable {
     /**
      * gas amount(use to charge when rent and return)
      */
-    private double gasAmount;
+    private Double gasAmount;
 
     /**
      * price for rent a day
      */
-    private double rentDailyPrice;
+    private Double rentDailyPrice;
 
     public String getCarId() {
         return carId;
@@ -82,11 +82,11 @@ public class CarDTO implements Serializable {
         this.carSku = carSku;
     }
 
-    public int getCarStatus() {
+    public Integer getCarStatus() {
         return carStatus;
     }
 
-    public void setCarStatus(int carStatus) {
+    public void setCarStatus(Integer carStatus) {
         this.carStatus = carStatus;
     }
 
@@ -98,19 +98,19 @@ public class CarDTO implements Serializable {
         this.storeId = storeId;
     }
 
-    public double getGasAmount() {
+    public Double getGasAmount() {
         return gasAmount;
     }
 
-    public void setGasAmount(double gasAmount) {
+    public void setGasAmount(Double gasAmount) {
         this.gasAmount = gasAmount;
     }
 
-    public double getRentDailyPrice() {
+    public Double getRentDailyPrice() {
         return rentDailyPrice;
     }
 
-    public void setRentDailyPrice(double rentDailyPrice) {
+    public void setRentDailyPrice(Double rentDailyPrice) {
         this.rentDailyPrice = rentDailyPrice;
     }
 }
