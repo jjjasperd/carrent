@@ -17,6 +17,8 @@ import com.domain.dto.carmanagement.CarDTO;
  */
 public interface CarRentalApi {
 
+    Result addCar(CarDTO carDTO);
+
     /**
      * check the inventory by queryCarInventory
      * rent a car

@@ -16,7 +16,15 @@ import java.util.UUID;
  */
 public class UuidUtils {
 
-    public static String getUserUuid(){
+    public static String getUserUuid() {
         return "U" +UUID.randomUUID().toString().replace("-", "").toLowerCase().substring(0,16);
+    }
+
+    public static String getCarUuid() {
+        return "C" +UUID.randomUUID().toString().replace("-", "").toLowerCase().substring(0,16);
+    }
+
+    public static String getStoreUuid() {
+        return "S" +UUID.randomUUID().toString().replace("-", "").toLowerCase().substring(0,16);
     }
 }

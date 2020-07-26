@@ -19,13 +19,6 @@ import com.domain.dto.carmanagement.StoreDTO;
 public interface InventoryApi {
 
     /**
-     * query Car Inventory of a stroe
-     * @param storeDTO storeDTO
-     * @return result
-     */
-    Result queryCarInventory(StoreDTO storeDTO);
-
-    /**
      * Reduce the inventory of a car in store when someone rent it.
      * @param carDTO carDTO
      * @return result

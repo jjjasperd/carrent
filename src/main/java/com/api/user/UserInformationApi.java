@@ -4,8 +4,7 @@
  *****************************************************************************/
 package com.api.user;
 
-import com.domain.dto.userinfo.UserInfoDTO;
-import com.domain.po.userinfo.UserInfoPO;
+import com.common.result.Result;
 
 /**
  * @author Yujia Duan
@@ -19,8 +18,9 @@ public interface UserInformationApi {
 
     /**
      * query user info by condition
-     * @param userInfoDTO
-     * @return
+     *
+     * @param userId userId
+     * @return result
      */
-    UserInfoPO queryUserInfo(UserInfoDTO userInfoDTO);
+    Result queryUserInfoById(String userId);
 }
