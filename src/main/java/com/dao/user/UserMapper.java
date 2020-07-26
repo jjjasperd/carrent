@@ -17,7 +17,7 @@ import org.apache.ibatis.annotations.*;
  */
 @Mapper
 public interface UserMapper {
-    @Insert("INSERT INTO carrental.user (user_id, user_name, user_age, user_gender, user_address, user_driver_license_id, customer_name, user_phone) VALUES (#{userId}, #{userName}, #{userAge}, #{userGender}, #{userAddress}, #{userDriverLicenseId}, #{customerName}, #{userPhone})")
+    @Insert("INSERT INTO carrental.user (user_id, user_name, user_password, user_age, user_gender, user_address, user_driver_license_id, customer_name, user_phone) VALUES (#{userId}, #{userName}, #{userPassword}, #{userAge}, #{userGender}, #{userAddress}, #{userDriverLicenseId}, #{customerName}, #{userPhone})")
     int insertUser(UserInfoPO userInfoPO);
 
     @Delete("DELETE FROM carrental.user where user_id = #{userId}")
