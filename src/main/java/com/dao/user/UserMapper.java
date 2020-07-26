@@ -23,6 +23,6 @@ public interface UserMapper {
     @Delete("DELETE FROM carrental.user where user_id = #{userId}")
     int deleteUSerById(String userId);
 
-    @Select("select * from carrental.com.user where user_id = #{userId}")
+    @Select("select * from carrental.user where user_id = #{userId}")
     UserInfoPO getUserById(String userId);
 }
