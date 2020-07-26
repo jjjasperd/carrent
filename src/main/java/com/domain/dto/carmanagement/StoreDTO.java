@@ -4,8 +4,6 @@
  *****************************************************************************/
 package com.domain.dto.carmanagement;
 
-import com.domain.po.carmanagement.CarPO;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -34,7 +32,7 @@ public class StoreDTO implements Serializable {
     /**
      * store car list
      */
-    private List<CarPO> carPOList;
+    private List<CarDTO> carDTOList;
 
     public String getStoreId() {
         return storeId;
@@ -52,11 +50,11 @@ public class StoreDTO implements Serializable {
         this.storeName = storeName;
     }
 
-    public List<CarPO> getCarPOList() {
-        return carPOList;
+    public List<CarDTO> getCarDTOList() {
+        return carDTOList;
     }
 
-    public void setCarPOList(List<CarPO> carPOList) {
-        this.carPOList = carPOList;
+    public void setCarDTOList(List<CarDTO> carDTOList) {
+        this.carDTOList = carDTOList;
     }
 }

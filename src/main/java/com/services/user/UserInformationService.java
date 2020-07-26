@@ -5,9 +5,17 @@
 package com.services.user;
 
 import com.api.user.UserInformationApi;
+import com.common.businessexception.BusinessException;
+import com.common.businessexception.CommonErrorCode;
+import com.common.result.Result;
+import com.common.utils.DataConvertUtils;
+import com.common.utils.ResultUtils;
+import com.dao.user.UserMapper;
 import com.domain.dto.userinfo.UserInfoDTO;
-import com.domain.po.userinfo.UserInfoPO;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author Yujia Duan
@@ -20,8 +28,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInformationService implements UserInformationApi {
 
+    @Resource
+    private UserMapper userMapper;
     @Override
-    public UserInfoPO queryUserInfo(UserInfoDTO userInfoDTO) {
-        return null;
+    public Result queryUserInfoById(String userId) {
+        if (StringUtils.isBlank(userId)) {
+            throw new BusinessException(CommonErrorCode.PARAM_ERROR.getErrCode(), CommonErrorCode.PARAM_ERROR.getErrMsg());
+        }
+        UserInfoDTO resultUserInfoDTO = DataConvertUtils.userInfoPO2DTO(userMapper.getUserById(userId));
+        return ResultUtils.success(resultUserInfoDTO);
     }
 }

@@ -4,109 +4,98 @@
  *****************************************************************************/
 package com.domain.po.carmanagement;
 
-/**
- * @author Yujia Duan
- * @version V1.0
- * @Title: CarDTO.java
- * @Package com.domain.dto.com.carmanagement
- * @Description car dto
- * @date 2020 07-13 1:30.
- */
-public class CarPO {
+import java.io.Serializable;
 
-    /**
-     * car id
-     */
-    private String carId;
+public class CarPO implements Serializable {
 
-    /**
-     * name of the car
-     */
-    private String carName;
+  private static final long serialVersionUID = -9051417307175314509L;
+  private String carId;
+  private String carName;
+  private String carSku;
+  private Integer carStatus;
+  private String storeId;
+  private Double gasAmount;
+  private Double rentDailyPrice;
+  private java.sql.Timestamp createTime;
+  private java.sql.Timestamp modifyTime;
 
-    /**
-     * identical of the car type
-     */
-    private String carSku;
 
-    /**
-     * car status
-     * 1 : Available
-     * 2 : being rented
-     * 3 : inspecting
-     * 4 : repairing
-     * 5 : damaged
-     */
-    private int carStatus;
+  public String getCarId() {
+    return carId;
+  }
 
-    /**
-     * store id
-     */
-    private String storeId;
+  public void setCarId(String carId) {
+    this.carId = carId;
+  }
 
-    /**
-     * gas amount(use to charge when rent and return)
-     */
-    private double gasAmount;
 
-    /**
-     * price for rent a day
-     */
-    private double rentDailyPrice;
+  public String getCarName() {
+    return carName;
+  }
 
-    public String getCarId() {
-        return carId;
-    }
+  public void setCarName(String carName) {
+    this.carName = carName;
+  }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
-    }
 
-    public String getCarName() {
-        return carName;
-    }
+  public String getCarSku() {
+    return carSku;
+  }
 
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
+  public void setCarSku(String carSku) {
+    this.carSku = carSku;
+  }
 
-    public String getCarSku() {
-        return carSku;
-    }
 
-    public void setCarSku(String carSku) {
-        this.carSku = carSku;
-    }
+  public Integer getCarStatus() {
+    return carStatus;
+  }
 
-    public int getCarStatus() {
-        return carStatus;
-    }
+  public void setCarStatus(Integer carStatus) {
+    this.carStatus = carStatus;
+  }
 
-    public void setCarStatus(int carStatus) {
-        this.carStatus = carStatus;
-    }
 
-    public String getStoreId() {
-        return storeId;
-    }
+  public String getStoreId() {
+    return storeId;
+  }
 
-    public void setStoreId(String storeId) {
-        this.storeId = storeId;
-    }
+  public void setStoreId(String storeId) {
+    this.storeId = storeId;
+  }
 
-    public double getGasAmount() {
-        return gasAmount;
-    }
 
-    public void setGasAmount(double gasAmount) {
-        this.gasAmount = gasAmount;
-    }
+  public Double getGasAmount() {
+    return gasAmount;
+  }
 
-    public double getRentDailyPrice() {
-        return rentDailyPrice;
-    }
+  public void setGasAmount(Double gasAmount) {
+    this.gasAmount = gasAmount;
+  }
 
-    public void setRentDailyPrice(double rentDailyPrice) {
-        this.rentDailyPrice = rentDailyPrice;
-    }
+  public Double getRentDailyPrice() {
+    return rentDailyPrice;
+  }
+
+  public void setRentDailyPrice(Double rentDailyPrice) {
+    this.rentDailyPrice = rentDailyPrice;
+  }
+
+  public java.sql.Timestamp getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(java.sql.Timestamp createTime) {
+    this.createTime = createTime;
+  }
+
+
+  public java.sql.Timestamp getModifyTime() {
+    return modifyTime;
+  }
+
+  public void setModifyTime(java.sql.Timestamp modifyTime) {
+    this.modifyTime = modifyTime;
+  }
+
 }

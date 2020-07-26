@@ -4,8 +4,10 @@
  *****************************************************************************/
 package com.common.utils;
 
+import com.domain.dto.carmanagement.CarDTO;
 import com.domain.dto.userinfo.UserInfoDTO;
 import com.domain.dto.userinfo.UserRegistrationDTO;
+import com.domain.po.carmanagement.CarPO;
 import com.domain.po.userinfo.UserInfoPO;
 
 /**
@@ -48,4 +50,51 @@ public class DataConvertUtils {
         userInfoPO.setUserPhone(userRegistrationDTO.getUserPhone());
         return userInfoPO;
     }
+
+    public static UserInfoDTO userInfoPO2DTO(UserInfoPO userInfoPO) {
+        if (userInfoPO == null) {
+            return null;
+        }
+        UserInfoDTO userInfoDTO = new UserInfoDTO();
+        userInfoDTO.setUserId(userInfoPO.getUserId());
+        userInfoDTO.setUserName(userInfoPO.getUserName());
+        userInfoDTO.setUserAge(userInfoPO.getUserAge());
+        userInfoDTO.setUserGender(userInfoPO.getUserGender());
+        userInfoDTO.setUserAddress(userInfoPO.getUserAddress());
+        userInfoDTO.setUserDriverLicenseId(userInfoPO.getUserDriverLicenseId());
+        userInfoDTO.setCustomerName(userInfoPO.getCustomerName());
+        userInfoDTO.setUserPhone(userInfoPO.getUserPhone());
+        return userInfoDTO;
+    }
+
+    public static CarPO carDTO2PO(CarDTO carDTO) {
+        if (carDTO == null) {
+            return null;
+        }
+        CarPO carPO = new CarPO();
+        carPO.setCarId(carDTO.getCarId());
+        carPO.setCarName(carDTO.getCarName());
+        carPO.setCarSku(carDTO.getCarSku());
+        carPO.setCarStatus(carDTO.getCarStatus());
+        carPO.setStoreId(carDTO.getStoreId());
+        carPO.setGasAmount(carDTO.getGasAmount());
+        carPO.setRentDailyPrice(carDTO.getRentDailyPrice());
+        return carPO;
+    }
+
+    public static CarDTO carPO2DTO(CarPO carPO) {
+        if (carPO == null) {
+            return null;
+        }
+        CarDTO carDTO = new CarDTO();
+        carDTO.setCarId(carPO.getCarId());
+        carDTO.setCarName(carPO.getCarName());
+        carDTO.setCarSku(carPO.getCarSku());
+        carDTO.setCarStatus(carPO.getCarStatus());
+        carDTO.setStoreId(carPO.getStoreId());
+        carDTO.setGasAmount(carPO.getGasAmount());
+        carDTO.setRentDailyPrice(carPO.getRentDailyPrice());
+        return carDTO;
+    }
+
 }

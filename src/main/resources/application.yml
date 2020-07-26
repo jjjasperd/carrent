@@ -28,3 +28,7 @@ mybatis:
   configuration:
     #map camel(userName) to underscore(user_name)
     map-underscore-to-camel-case: true
+    cache-enabled: true
+    use-generated-keys: true
+    default-executor-type: reuse
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

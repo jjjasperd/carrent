@@ -4,122 +4,108 @@
  *****************************************************************************/
 package com.domain.po.order;
 
-import java.util.Date;
 
-/**
- * @author Yujia Duan
- * @version V1.0
- * @Title: OrderDTO.java
- * @Package com.domain.dto.com.order
- * @Description Order dto
- * @date 2020 07-13 0:54.
- */
 public class OrderPO {
 
-    /**
-     * orderNo
-     */
-    private String orderNo;
+  private String orderNo;
+  private String userName;
+  private String userId;
+  private String carName;
+  private String carId;
+  private java.sql.Date rentStartDate;
+  private java.sql.Date rentEndDate;
+  private long orderStatus;
+  private java.sql.Timestamp creaateTime;
+  private java.sql.Timestamp modifyTime;
 
-    /**
-     * com.user name
-     */
-    private String userName;
 
-    /**
-     * com.user id
-     */
-    private String userId;
+  public String getOrderNo() {
+    return orderNo;
+  }
 
-    /**
-     * car name
-     */
-    private String carName;
+  public void setOrderNo(String orderNo) {
+    this.orderNo = orderNo;
+  }
 
-    /**
-     * car id
-     */
-    private String carId;
 
-    /**
-     * rent start date
-     */
-    private Date rentStartDate;
+  public String getUserName() {
+    return userName;
+  }
 
-    /**
-     * rent end(return) date
-     */
-    private Date rentEndDate;
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-    /**
-     * com.order status
-     * 1:New
-     * 2:renting
-     * 3:completed
-     */
-    private int orderStatus;
 
-    public String getOrderNo() {
-        return orderNo;
-    }
+  public String getUserId() {
+    return userId;
+  }
 
-    public void setOrderNo(String orderNo) {
-        this.orderNo = orderNo;
-    }
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
 
-    public String getUserName() {
-        return userName;
-    }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+  public String getCarName() {
+    return carName;
+  }
 
-    public String getUserId() {
-        return userId;
-    }
+  public void setCarName(String carName) {
+    this.carName = carName;
+  }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 
-    public String getCarName() {
-        return carName;
-    }
+  public String getCarId() {
+    return carId;
+  }
 
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
+  public void setCarId(String carId) {
+    this.carId = carId;
+  }
 
-    public String getCarId() {
-        return carId;
-    }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
-    }
+  public java.sql.Date getRentStartDate() {
+    return rentStartDate;
+  }
 
-    public Date getRentStartDate() {
-        return rentStartDate;
-    }
+  public void setRentStartDate(java.sql.Date rentStartDate) {
+    this.rentStartDate = rentStartDate;
+  }
 
-    public void setRentStartDate(Date rentStartDate) {
-        this.rentStartDate = rentStartDate;
-    }
 
-    public Date getRentEndDate() {
-        return rentEndDate;
-    }
+  public java.sql.Date getRentEndDate() {
+    return rentEndDate;
+  }
 
-    public void setRentEndDate(Date rentEndDate) {
-        this.rentEndDate = rentEndDate;
-    }
+  public void setRentEndDate(java.sql.Date rentEndDate) {
+    this.rentEndDate = rentEndDate;
+  }
 
-    public int getOrderStatus() {
-        return orderStatus;
-    }
 
-    public void setOrderStatus(int orderStatus) {
-        this.orderStatus = orderStatus;
-    }
+  public long getOrderStatus() {
+    return orderStatus;
+  }
+
+  public void setOrderStatus(long orderStatus) {
+    this.orderStatus = orderStatus;
+  }
+
+
+  public java.sql.Timestamp getCreaateTime() {
+    return creaateTime;
+  }
+
+  public void setCreaateTime(java.sql.Timestamp creaateTime) {
+    this.creaateTime = creaateTime;
+  }
+
+
+  public java.sql.Timestamp getModifyTime() {
+    return modifyTime;
+  }
+
+  public void setModifyTime(java.sql.Timestamp modifyTime) {
+    this.modifyTime = modifyTime;
+  }
+
 }

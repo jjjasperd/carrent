@@ -4,13 +4,42 @@
  *****************************************************************************/
 package com.domain.po.carmanagement;
 
+public class InventoryLogPO {
 
-public class StorePO {
-
+  private long logId;
+  private long logType;
+  private String carId;
   private String storeId;
-  private String storeName;
+  private String remark;
   private java.sql.Timestamp createTime;
   private java.sql.Timestamp modifyTime;
+
+
+  public long getLogId() {
+    return logId;
+  }
+
+  public void setLogId(long logId) {
+    this.logId = logId;
+  }
+
+
+  public long getLogType() {
+    return logType;
+  }
+
+  public void setLogType(long logType) {
+    this.logType = logType;
+  }
+
+
+  public String getCarId() {
+    return carId;
+  }
+
+  public void setCarId(String carId) {
+    this.carId = carId;
+  }
 
 
   public String getStoreId() {
@@ -22,12 +51,12 @@ public class StorePO {
   }
 
 
-  public String getStoreName() {
-    return storeName;
+  public String getRemark() {
+    return remark;
   }
 
-  public void setStoreName(String storeName) {
-    this.storeName = storeName;
+  public void setRemark(String remark) {
+    this.remark = remark;
   }
 
 

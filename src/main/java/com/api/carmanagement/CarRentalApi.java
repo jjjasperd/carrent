@@ -7,6 +7,8 @@ package com.api.carmanagement;
 import com.common.result.Result;
 import com.domain.dto.carmanagement.CarDTO;
 
+import java.util.List;
+
 /**
  * @author Yujia Duan
  * @version V1.0
@@ -16,6 +18,8 @@ import com.domain.dto.carmanagement.CarDTO;
  * @date 2020 07-13 1:44.
  */
 public interface CarRentalApi {
+
+    Result addCar(CarDTO carDTO);
 
     /**
      * check the inventory by queryCarInventory
@@ -33,4 +37,11 @@ public interface CarRentalApi {
      * @return result
      */
     Result returnCar(CarDTO carDTO);
+
+    /**
+     * get car info list by condition
+     * @param carDTO carDTO
+     * @return res
+     */
+    List<CarDTO> queryCarList(CarDTO carDTO);
 }
