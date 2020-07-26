@@ -43,6 +43,7 @@ public class DataConvertUtils {
         UserInfoPO userInfoPO = new UserInfoPO();
         userInfoPO.setUserName(userRegistrationDTO.getUserName());
         userInfoPO.setUserAge(userRegistrationDTO.getUserAge());
+        userInfoPO.setUserPassword(userRegistrationDTO.getUserPassword());
         userInfoPO.setUserGender(userRegistrationDTO.getUserGender());
         userInfoPO.setUserAddress(userRegistrationDTO.getUserAddress());
         userInfoPO.setUserDriverLicenseId(userRegistrationDTO.getUserDriverLicenseId());
